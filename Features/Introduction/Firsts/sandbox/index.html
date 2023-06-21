@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <title>BabylonJS Sandbox - View glTF, glb, obj and babylon files</title>
+    <meta name="description" content="Viewer for glTF, glb, obj and babylon files powered by BabylonJS" />
+    <meta name="keywords" content="Babylon.js, Babylon, BabylonJS, glTF, glb, obj, viewer, online viewer, 3D model viewer, 3D, webgl" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+    <meta charset="UTF-8">
+
+    <link href="css/index.css" rel="stylesheet" />
+    <script src="js/pep.min.js"></script>
+    <script src="js/split.js"></script>
+
+    <script src="js/ammo.js"></script>
+    <script src="js/cannon.js"></script>
+    <script src="js/Oimo.js"></script>
+    <script src="js/gltf_validator.js"></script>
+    <script src="js/babylon.js"></script>
+    <script src="js/babylon.inspector.bundle.js"></script>
+
+    <script src="js/babylonjs.loaders.min.js"></script>
+    <script src="js/babylonjs.serializers.min.js"></script>
+    <script src="js/babylonjs.materials.min.js"></script>
+</head>
+
+<body>
+<div id="root">
+    <p id="droptext"></p>
+    <div id="canvasZone">
+        <canvas id="renderCanvas" touch-action="none"></canvas>
+    </div>
+    <div id="footer" class="footer">
+        <div id="animationBar">
+            <div class="dropdown">
+                <div id="dropdownBtn">
+                    <img src="Assets/Icon_Up.svg" id="chevronUp">
+                    <img src="Assets/Icon_Down.svg" id="chevronDown">
+                    <span id="dropdownLabel"></span>
+                </div>
+                <div id="dropdownContent">
+                </div>
+            </div>
+            <div class="row">
+                <button id="playBtn" class="pause">
+                    <img id="playImg" src="Assets/Icon_Play.svg">
+                    <img id="pauseImg" src="Assets/Icon_Pause.svg">
+                </button>
+                <input id="slider" type="range" min="0" max="100" value="0" step="any">
+            </div>
+        </div>
+        <div class="footerRight">
+            <a href="javascript:void(null);" id="btnInspector" class="hidden"><img src="./Assets/Icon_EditModel.svg" alt="Display inspector" title="Display inspector" /></a>
+            <a href="javascript:void(null);">
+                <div class="custom-upload" title="Open your scene from your hard drive (.babylon, .gltf, .glb, .obj)">
+                    <input type="file" id="files" multiple />
+                </div>
+            </a>
+        </div>
+    </div>
+    <div id="logoContainer">
+        <div id="logo"></div>
+    </div>
+    <div id="errorZone"></div>
+</div>
+<script src="js/index.js"></script>
+</body>
+
+</html>
